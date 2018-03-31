@@ -1,8 +1,6 @@
 package com.sasagavric.recipe.domain;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
-
 import org.junit.Before;
 import org.junit.Test;
 
@@ -26,12 +24,12 @@ public class CategoryTest {
 
 	@Test
 	public void testGetDescription() {
-		fail("Not yet implemented");
+		
 	}
 
 	@Test
 	public void testGetRecipes() {
-		fail("Not yet implemented");
+		
 	}
 
 }
