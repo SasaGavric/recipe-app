@@ -1,6 +1,7 @@
 package com.sasagavric.recipe.service;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,18 @@ public class RecipeServiceImpl implements RecipeService {
 		recipeRepository.findAll().iterator().forEachRemaining(recipeSet::add);
 		
 		return recipeSet;
+	}
+
+	@Override
+	public Recipe findById(long id) {
+		
+		Optional<Recipe> recipeOptional = recipeRepository.findById(id);
+		
+		if(!recipeOptional.isPresent()) {
+			throw new RuntimeException("Recipe not found!");
+		}
+		
+		return recipeOptional.get();
 	}
 	
 	
